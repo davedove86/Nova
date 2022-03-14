@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+:root {
+	/* Define Colors as colors */
+	--blue: #3d5af1;
+	--blue-dark: #3651d4;
+	--blue-light: #5872f5;
+	--green: #00ebc7;
+	--red: #ff5470;
+	--yellow: #fde24f;
+	--black: #1b2d45;
+	--darkBlue: #333269;
+	--grey: #bfbfbf;
+	--darkGrey: #222;
+	--lightGrey: #e4e2f5;
+	--white: #fff;
+
+	/* Define Color Intentions */
+	--primary: var(--green);
+	--danger: var(--red);
+	--background: var(--lightGrey);
+	--textColor: var(--black);
+	--buttonTextColor: var(--black);
+	--lineColor: var(--grey);
+	--cardBg: var(--white);
+	--headerBackground: var(--darkBlue);
+	--footerBackground: var(--black);
+
+	/* Styles */
+	--line: solid 1px var(--lineColor);
+
+	/* Type */
+	--headingFont: 'Lato', sans-serif;
+	--bodyFont: 'Lato', sans-serif;
+	--baseFontSize: 100%;
+	--h1: 3.052rem;
+	--h2: 2.441rem;
+	--h3: 1.953rem;
+	--h4: 1.563rem;
+	--h5: 1.25rem;
+	--text-small: 0.8rem;
+
+	/* Elevation - Shadows */
+	--shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	--shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	--shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+	/* Positioning */
+	--containerPadding: 2.5%;
+	--borderRadius: 10px;
+}
+
+/* From Type Scale */
+
+html {
+	font-size: var(--baseFontSize);
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: var(--background);
+	color: var(--textColor);
+	font-family: var(--bodyFont);
+	font-weight: 400;
+	line-height: 1.75;
+	overflow-x: hidden;
+	min-height: 100vh;
+	display: flex;
+	position: relative;
+}
+
+p {
+	margin-bottom: 1rem;
+	/* max-width: 60ch; */
+}
+
+p a,
+blockquote a {
+	color: var(--textColor);
+	text-decoration: none;
+	border-bottom: solid 2px var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 3rem 0 1.38rem;
+	font-family: var(--headingFont);
+	font-weight: 400;
+	line-height: 1.3;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: var(--h1);
+}
+
+h2 {
+	margin-top: 0;
+	font-size: var(--h2);
+}
+
+h3 {
+	margin-top: 0;
+	font-size: var(--h3);
+}
+
+h4 {
+	margin-top: 0;
+	font-size: var(--h4);
+}
+
+h5 {
+	margin-top: 0;
+	font-size: var(--h5);
+}
+
+small,
+.text_small {
+	margin-top: 0;
+	font-size: var(--text-small);
+}
+
+/* End Typescale */
+
+/* section {
+	padding: 1rem;
+} */
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.logo-text {
+	margin-bottom: 0;
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	background-color: var(--blue);
+	width: 16rem;
+	padding: 1.8rem 0.85rem;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	transition: width 0.5s ease-in-out;
+}
+
+nav::before {
+	content: '';
+	position: absolute;
+	width: 2rem;
+	height: 100%;
+	top: 0;
+	left: 100%;
+}
+
+main {
+	flex: 1;
+	padding: 2rem;
+	color: #1f2027;
+	display: flex;
+	flex-direction: column;
+}
+
+body main h1 {
+	margin-bottom: 1rem;
+}
+
+main .copyright {
+	margin-top: auto;
+	font-size: 0.9rem;
+}
+
+main .copyright span {
+	color: var(--blue);
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.sidebar-top {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.sidebar-top .logo {
+	width: 2.1rem;
+	margin: 0 0.8rem;
+}
+
+.sidebar-top h3 {
+	padding-left: 0.5rem;
+	font-weight: 600;
+	font-size: 1.15rem;
+}
+
+.shrink-btn {
+	position: absolute;
+	top: 50%;
+	height: 27px;
+	padding: 0 0.3rem;
+	background-color: var(--blue);
+	border-radius: 6px;
+	cursor: pointer;
+	box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
+	right: -2.65rem;
+	transform: translateY(-50%) translateX(-8px);
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.3s;
+}
+
+.shrink-btn i {
+	line-height: 27px;
+	transition: 0.3s;
+}
+
+.shrink-btn:hover {
+	background-color: var(--blue-dark);
+}
+
+nav:hover .shrink-btn,
+.shrink-btn.hovered {
+	transform: translateY(-50%) translateX(0px);
+	opacity: 1;
+	pointer-events: all;
+}
+
+.search {
+	min-height: 2.7rem;
+	background-color: var(--blue-light);
+	margin: 2rem 0.5rem 1.7rem;
+	display: grid;
+	grid-template-columns: 2.7rem 1fr;
+	align-items: center;
+	text-align: center;
+	border-radius: 50px;
+	cursor: pointer;
+}
+
+.search input {
+	height: 100%;
+	border: none;
+	background: none;
+	outline: none;
+	color: #fff;
+	caret-color: #fff;
+	font-family: inherit;
+}
+
+.search input::placeholder {
+	color: var(--text-color);
+}
+
+.sidebar-links ul {
+	position: relative;
+}
+
+.sidebar-links li {
+	position: relative;
+	padding: 2.5px 0;
+}
+
+.sidebar-links a {
+	color: var(--text-color);
+	font-weight: 400;
+	font-size: 0.9rem;
+	display: flex;
+	align-items: center;
+	height: 53px;
+}
+
+.icon {
+	font-size: 1.3rem;
+	text-align: center;
+	min-width: 3.7rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+.icon i {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	transition: 0.3s;
+}
+
+.icon i:last-child {
+	opacity: 0;
+	color: #fff;
+}
+
+.sidebar-links a.active,
+.sidebar-links a:hover {
+	color: #fff;
+}
+
+.sidebar-links a .link {
+	transition: opacity 0.3s 0.2s, color 0.3s;
+}
+
+.sidebar-links a.active i:first-child {
+	opacity: 0;
+}
+
+.sidebar-links a.active i:last-child {
+	opacity: 1;
+}
+
+.active-tab {
+	width: 100%;
+	height: 53px;
+	background-color: var(--blue-dark);
+	border-radius: 10px;
+	position: absolute;
+	top: 2.5px;
+	left: 0;
+	transition: top 0.3s;
+}
+
+.sidebar-links h4 {
+	position: relative;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 0 0.8rem;
+	color: var(--text-color);
+	letter-spacing: 0.5px;
+	height: 45px;
+	line-height: 45px;
+	transition: opacity 0.3s 0.2s, height 0.5s 0s;
+}
+
+.sidebar-footer {
+	position: relative;
+	margin-top: auto;
+}
+
+.account {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.3rem;
+	color: var(--text-color);
+	height: 53px;
+	width: 3.7rem;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s 0s, color 0.3s 0s;
+}
+
+.account:hover {
+	color: #fff;
+}
+
+.admin-user {
+	display: flex;
+	align-items: center;
+}
+
+.admin-profile {
+	white-space: nowrap;
+	max-width: 100%;
+	transition: opacity 0.3s 0.2s, max-width 0.7s 0s ease-in-out;
+	display: flex;
+	align-items: center;
+	flex: 1;
+	overflow: hidden;
+}
+
+.admin-user img {
+	width: 2.9rem;
+	border-radius: 50%;
+	margin: 0 0.4rem;
+}
+
+.admin-info {
+	padding-left: 0.3rem;
+}
+
+.admin-info h3 {
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1;
+	margin-bottom: 0;
+}
+
+.admin-info h5 {
+	font-weight: 400;
+	font-size: 0.75rem;
+	color: var(--text-color);
+	margin: 0.3rem 0 0 0;
+	line-height: 1;
+}
+
+.log-out {
+	display: flex;
+	height: 40px;
+	min-width: 2.4rem;
+	background-color: var(--blue-dark);
+	color: var(--text-color);
+	align-items: center;
+	justify-content: center;
+	font-size: 1.15rem;
+	border-radius: 10px;
+	margin: 0 0.65rem;
+	transition: color 0.3s;
+}
+
+.log-out:hover {
+	color: var(--background);
+}
+
+.tooltip {
+	background-color: var(--blue);
+	position: absolute;
+	right: -1.2rem;
+	top: 0;
+	transform: translateX(100%) translateY(-50%);
+	padding: 0 0.8rem;
+	font-size: 0.85rem;
+	display: none;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+	height: 30px;
+	align-items: center;
+	border-radius: 7px;
+	box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.tooltip span {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.tooltip span.show {
+	opacity: 1;
+}
+
+.tooltip-element:hover ~ .tooltip {
+	opacity: 1;
+	pointer-events: all;
+}
+
+/* When the menu shrinks */
+
+.hide {
+	transition: opacity 0.3s 0.2s;
+}
+
+body.shrink nav {
+	width: 5.4rem;
+}
+
+body.shrink .hide {
+	opacity: 0;
+	pointer-events: none;
+	transition-delay: 0s;
+}
+
+body.shrink .shrink-btn i {
+	transform: rotate(-180deg);
+}
+
+body.shrink .sidebar-links h4 {
+	height: 10px;
+}
+
+body.shrink .account {
+	opacity: 1;
+	pointer-events: all;
+	transition: opacity 0.3s 0.3s, color 0.3s 0s;
+}
+
+body.shrink .admin-profile {
+	max-width: 0;
+	transition: opacity 0.3s 0s, max-width 0.7s 0s ease-in-out;
+}
+
+body.shrink .tooltip {
+	display: grid;
+}

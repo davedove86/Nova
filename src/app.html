@@ -2,12 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<link rel="icon" href="%svelte.assets%/favicon.png" />
+
+		<!-- Add Favicons -->
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%svelte.head%
+		<!-- Boxicons -->
+		<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="/css/normalise.css" />
+		<link rel="stylesheet" href="/css/style.css" />
 	</head>
 	<body>
-		<div>%svelte.body%</div>
+		<div id="svelte">%svelte.body%</div>
+		<script src="/js/script.js"></script>
 	</body>
 </html>
