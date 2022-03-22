@@ -32,12 +32,21 @@ const css = {
 };
 const Routes = (0, import_index_af382e8c.c)(($$result, $$props, $$bindings, slots) => {
   let { user = "John Smith" } = $$props;
+  const date = new Date();
+  const time = date.getHours();
+  if (time < 12) {
+    user = "Good morning, " + user;
+  } else if (time < 18) {
+    user = "Good afternoon, " + user;
+  } else {
+    user = "Good evening, " + user;
+  }
   if ($$props.user === void 0 && $$bindings.user && user !== void 0)
     $$bindings.user(user);
   $$result.css.add(css);
   return `${$$result.head += `${$$result.title = `<title>Nova - Dashboard</title>`, ""}`, ""}
 
-<section><p class="${"welcome-message svelte-1icfzwy"}">Good morning ${(0, import_index_af382e8c.e)(user)}</p>
+<section><p class="${"welcome-message svelte-1icfzwy"}">${(0, import_index_af382e8c.e)(user)}</p>
 	<h1>Welcome Back</h1>
 	<div class="${"dashboard-grid svelte-1icfzwy"}"><div class="${"dahsboard-col"}"><h3>Premise Licence Breakdown</h3>
 			<div class="${"dashboard-grid-premises svelte-1icfzwy"}"><a href="${"/"}"><div class="${"card svelte-1icfzwy"}"><i class="${"bx bx-file-blank blue-icon svelte-1icfzwy"}"></i>

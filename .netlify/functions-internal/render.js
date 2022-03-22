@@ -5,7 +5,7 @@ exports.handler = init({
 	assets: new Set(["css/normalise.css","css/style.css","img/android-chrome-192x192.png","img/android-chrome-256x256.png","img/apple-touch-icon.png","img/browserconfig.xml","img/face-1.png","img/favicon-16x16.png","img/favicon-32x32.png","img/favicon.ico","img/logo.png","img/mstile-150x150.png","img/person/1.jpeg","img/safari-pinned-tab.svg","img/site.webmanifest","js/script.js"]),
 	_: {
 		mime: {".css":"text/css",".png":"image/png",".xml":"application/xml",".ico":"image/vnd.microsoft.icon",".jpeg":"image/jpeg",".svg":"image/svg+xml",".webmanifest":"application/manifest+json",".js":"application/javascript"},
-		entry: {"file":"start-6f18144c.js","js":["start-6f18144c.js","chunks/vendor-dd0e2a05.js"],"css":[]},
+		entry: {"file":"start-2136ffe5.js","js":["start-2136ffe5.js","chunks/vendor-dd0e2a05.js"],"css":[]},
 		nodes: [
 			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
 			() => Promise.resolve().then(() => require('../server/nodes/1.js')),
