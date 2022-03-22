@@ -1,0 +1,102 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index-af382e8c.js"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "entries/pages/__layout.svelte.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-af382e8c.js"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-af382e8c.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-af382e8c.js"
+    ],
+    "css": [
+      "assets/entries/pages/index.svelte-7e242198.css"
+    ]
+  },
+  "src/routes/premises.svelte": {
+    "file": "entries/pages/premises.svelte.js",
+    "src": "src/routes/premises.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-af382e8c.js",
+      "_index-50168289.js"
+    ],
+    "css": [
+      "assets/entries/pages/premises.svelte-d328a270.css"
+    ]
+  },
+  "src/routes/settings.svelte": {
+    "file": "entries/pages/settings.svelte.js",
+    "src": "src/routes/settings.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-af382e8c.js"
+    ]
+  },
+  "src/routes/reports.svelte": {
+    "file": "entries/pages/reports.svelte.js",
+    "src": "src/routes/reports.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-af382e8c.js"
+    ]
+  },
+  "src/routes/person.svelte": {
+    "file": "entries/pages/person.svelte.js",
+    "src": "src/routes/person.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-af382e8c.js",
+      "_index-50168289.js"
+    ],
+    "css": [
+      "assets/entries/pages/person.svelte-b46535c9.css"
+    ]
+  },
+  "src/routes/tasks.svelte": {
+    "file": "entries/pages/tasks.svelte.js",
+    "src": "src/routes/tasks.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-af382e8c.js"
+    ]
+  },
+  "src/routes/help.svelte": {
+    "file": "entries/pages/help.svelte.js",
+    "src": "src/routes/help.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-af382e8c.js"
+    ]
+  },
+  "_index-af382e8c.js": {
+    "file": "chunks/index-af382e8c.js"
+  },
+  "_index-50168289.js": {
+    "file": "chunks/index-50168289.js",
+    "imports": [
+      "_index-af382e8c.js"
+    ]
+  }
+}
