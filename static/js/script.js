@@ -7,6 +7,7 @@ const tooltip_elements = document.querySelectorAll('.tooltip-element');
 
 let activeIndex;
 
+// Shrink & Grow Sidebar
 shrink_btn.addEventListener('click', () => {
 	document.body.classList.toggle('shrink');
 	setTimeout(moveActiveTab, 400);
@@ -18,11 +19,13 @@ shrink_btn.addEventListener('click', () => {
 	}, 500);
 });
 
+// Grow Search Bar on click
 search.addEventListener('click', () => {
 	document.body.classList.remove('shrink');
 	search.lastElementChild.focus();
 });
 
+// Navigation highlighting
 function moveActiveTab() {
 	let topPosition = activeIndex * 58 + 2.5;
 
@@ -33,6 +36,7 @@ function moveActiveTab() {
 	active_tab.style.top = `${topPosition}px`;
 }
 
+// Change to navigation link on click
 function changeLink() {
 	sidebar_links.forEach((sideLink) => sideLink.classList.remove('active'));
 	this.classList.add('active');

@@ -1,9 +1,14 @@
+<script>
+	// TODO bring in from other component
+	const user = 'John Smith';
+</script>
+
 <nav>
 	<div class="sidebar-top">
 		<span class="shrink-btn">
 			<i class="bx bx-chevron-left" />
 		</span>
-		<img src="/img/logo.png" class="logo" alt="" />
+		<img src="/img/logo.png" class="logo" alt="Nova Logo" />
 		<h3 class="hide logo-text">Nova</h3>
 	</div>
 
@@ -16,7 +21,7 @@
 		<ul>
 			<div class="active-tab" />
 			<li class="tooltip-element" data-tooltip="0">
-				<a href="#" class="active" data-active="0">
+				<a href="/" class="active" data-active="0">
 					<div class="icon">
 						<i class="bx bx-tachometer" />
 						<i class="bx bxs-tachometer" />
@@ -25,37 +30,37 @@
 				</a>
 			</li>
 			<li class="tooltip-element" data-tooltip="1">
-				<a href="#" data-active="1">
+				<a href="premises" data-active="1">
 					<div class="icon">
-						<i class="bx bx-folder" />
-						<i class="bx bxs-folder" />
+						<i class="bx bx-buildings" />
+						<i class="bx bxs-buildings" />
 					</div>
-					<span class="link hide">Projects</span>
+					<span class="link hide">Premises</span>
 				</a>
 			</li>
 			<li class="tooltip-element" data-tooltip="2">
-				<a href="#" data-active="2">
+				<a href="person" data-active="2">
 					<div class="icon">
-						<i class="bx bx-message-square-detail" />
-						<i class="bx bxs-message-square-detail" />
+						<i class="bx bx-face" />
+						<i class="bx bxs-face" />
 					</div>
-					<span class="link hide">Messages</span>
+					<span class="link hide">Person</span>
 				</a>
 			</li>
 			<li class="tooltip-element" data-tooltip="3">
-				<a href="#" data-active="3">
+				<a href="reports" data-active="3">
 					<div class="icon">
 						<i class="bx bx-bar-chart-square" />
 						<i class="bx bxs-bar-chart-square" />
 					</div>
-					<span class="link hide">Analytics</span>
+					<span class="link hide">Reports</span>
 				</a>
 			</li>
 			<div class="tooltip">
 				<span class="show">Dashboard</span>
-				<span>Projects</span>
-				<span>Messages</span>
-				<span>Analytics</span>
+				<span>Premises</span>
+				<span>Person</span>
+				<span>Reports</span>
 			</div>
 		</ul>
 
@@ -63,7 +68,7 @@
 
 		<ul>
 			<li class="tooltip-element" data-tooltip="0">
-				<a href="#" data-active="4">
+				<a href="tasks" data-active="4">
 					<div class="icon">
 						<i class="bx bx-notepad" />
 						<i class="bx bxs-notepad" />
@@ -72,7 +77,7 @@
 				</a>
 			</li>
 			<li class="tooltip-element" data-tooltip="1">
-				<a href="#" data-active="5">
+				<a href="help" data-active="5">
 					<div class="icon">
 						<i class="bx bx-help-circle" />
 						<i class="bx bxs-help-circle" />
@@ -81,7 +86,7 @@
 				</a>
 			</li>
 			<li class="tooltip-element" data-tooltip="2">
-				<a href="#" data-active="6">
+				<a href="settings" data-active="6">
 					<div class="icon">
 						<i class="bx bx-cog" />
 						<i class="bx bxs-cog" />
@@ -98,23 +103,23 @@
 	</div>
 
 	<div class="sidebar-footer">
-		<a href="#" class="account tooltip-element" data-tooltip="0">
+		<a href="/" class="account tooltip-element" data-tooltip="0">
 			<i class="bx bx-user" />
 		</a>
 		<div class="admin-user tooltip-element" data-tooltip="1">
 			<div class="admin-profile hide">
-				<img src="./img/face-1.png" alt="" />
+				<img src="./img/face-1.png" alt="User Profile" />
 				<div class="admin-info">
-					<h3>John Doe</h3>
-					<h5>Admin</h5>
+					<h3>{user}</h3>
+					<h5>0247</h5>
 				</div>
 			</div>
-			<a href="#" class="log-out">
+			<a href="/" class="log-out">
 				<i class="bx bx-log-out" />
 			</a>
 		</div>
 		<div class="tooltip">
-			<span class="show">John Doe</span>
+			<span class="show">{user}</span>
 			<span>Logout</span>
 		</div>
 	</div>
