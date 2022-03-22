@@ -1,5 +1,16 @@
 <script>
 	export let user = 'John Smith';
+
+	const date = new Date();
+	const time = date.getHours();
+
+	if (time < 12) {
+		user = 'Good morning, ' + user;
+	} else if (time < 18) {
+		user = 'Good afternoon, ' + user;
+	} else {
+		user = 'Good evening, ' + user;
+	}
 </script>
 
 <svelte:head>
@@ -7,7 +18,7 @@
 </svelte:head>
 
 <section>
-	<p class="welcome-message">Good morning {user}</p>
+	<p class="welcome-message">{user}</p>
 	<h1>Welcome Back</h1>
 	<div class="dashboard-grid">
 		<div class="dahsboard-col">
